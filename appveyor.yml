@@ -31,4 +31,4 @@ cache:
   - C:\Users\appveyor\.nuget\packages -> appveyor.yml
 
 artifacts:
-- path: '**\bin\'
+- path: '**\bin\**\*.*'
