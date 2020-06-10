@@ -3,7 +3,6 @@ image: Visual Studio 2017
 init:
 - git config --global core.autocrlf true
 configuration:
-- Debug
 - Release
 before_build:
 - nuget restore
@@ -31,8 +30,5 @@ cache:
   - packages -> **\packages.config
   - C:\Users\appveyor\.nuget\packages -> appveyor.yml
 
-# 'Release' is hard-coded to ensure VSIX and NuGet artifacts are only published for release configuration builds
 artifacts:
-- path: 'StyleCop.Analyzers\StyleCop.Analyzers.Vsix\bin\Release\net452\*.vsix'
-- path: 'StyleCop.Analyzers\StyleCop.Analyzers.CodeFixes\bin\Release\*.nupkg'
-- path: 'StyleCop.Analyzers.Status.json'
+- path: '**\bin\'
